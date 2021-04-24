@@ -34,6 +34,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'bling/vim-bufferline'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Initialize plugin system
 call plug#end()
 
