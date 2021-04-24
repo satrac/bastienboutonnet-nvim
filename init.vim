@@ -37,7 +37,7 @@ Plug 'bling/vim-bufferline'
 "Initialize plugin system
 call plug#end()
 
-
+let g:airline#extensions#bufferline#enabled = 0
 
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
