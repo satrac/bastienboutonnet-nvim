@@ -2,7 +2,7 @@
     // python
     "python.pythonPath": "python",
     "python.venvPath": "~/venvs/",
-    "pyright.enable": false,
+    "pyright.enable": true,
 //formatting
     "suggest.enablePreview": true,
     "coc.preferences.formatOnType": true,
