@@ -37,6 +37,8 @@ Plug 'bling/vim-bufferline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'tiagovla/tokyodark.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
 
 "Initialize plugin system
 call plug#end()
