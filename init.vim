@@ -37,6 +37,7 @@ Plug 'bling/vim-bufferline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'tiagovla/tokyodark.nvim'
+Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 
@@ -288,3 +289,24 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Treesitter
 lua require'nvim-treesitter.configs'.setup {ensure_installed = {"python"}, highlight = {enable = true, disable = {"yaml"}}}
 
+" Lspa
+lua << EOF
+require'lspconfig'.pyls.setup{
+  settings = {
+    pyls = {
+      plugins = {
+        pyls_mypy = {enabled = true},
+        pycodestyle = {enabled = false},
+        }
+      }
+  }
+}
+EOF
+
+set completeopt-=preview
+
+" use omni completion provided by lsp
+autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
+nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+"nnoremap <silent>gr :Lspsaga rename<CR>
+"-- close rename win use <C-c> in insert mode or `q` in noremal mode or `:q`
