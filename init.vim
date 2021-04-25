@@ -286,4 +286,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 
 " Treesitter
-lua require'nvim-treesitter.configs'.setup { ensure_installed = "all", highlight = { enable = true } }
+lua require'nvim-treesitter.configs'.setup {ensure_installed = {"python"}, highlight = {enable = true, disable = {"yaml"}}}
+
