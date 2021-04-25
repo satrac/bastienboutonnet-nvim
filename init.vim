@@ -35,6 +35,9 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'bling/vim-bufferline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'tiagovla/tokyodark.nvim'
+
 "Initialize plugin system
 call plug#end()
 
@@ -112,12 +115,21 @@ autocmd BufReadPost *
 " Theme START
 syntax on
 "set termguicolors
-colorscheme onedark
+"colorscheme onedark
 "let g:seoul256_background = 236
 "colo seoul256
 set termguicolors
-let g:onedark_termcolors = 256
-let g:onedark_terminal_italics = 1
+"let g:onedark_termcolors = 256
+"let g:onedark_terminal_italics = 1
+
+" Tokyodark
+let g:tokyodark_transparent_background = 0
+let g:tokyodark_enable_italic_comment = 1
+let g:tokyodark_enable_italic = 1
+let g:tokyodark_color_gamma = "1.0"
+colorscheme tokyodark
+
+
 "set background=dark
 set cursorline
 set hidden
@@ -270,3 +282,6 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+
+" Treesitter
+lua require'nvim-treesitter.configs'.setup { ensure_installed = "all", highlight = { enable = true } }
