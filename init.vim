@@ -10,7 +10,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'machakann/vim-highlightedyank'
 "Plug 'lifepillar/vim-gruvbox8'
 "Plug 'tmhedberg/SimpylFold'
@@ -297,6 +298,7 @@ require'lspconfig'.pyls.setup{
       plugins = {
         pyls_mypy = {enabled = true},
         pycodestyle = {enabled = false},
+        flake = {enabled = true},
         }
       }
   }

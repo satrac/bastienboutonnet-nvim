@@ -3,6 +3,8 @@
     "python.pythonPath": "python",
     "python.venvPath": "~/venvs/",
     "pyright.enable": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": ["src/"],
 //formatting
     "suggest.enablePreview": true,
     "coc.preferences.formatOnType": true,
@@ -16,5 +18,5 @@
     "python.linting.flake8Path": "~/venvs/flake8/bin/flake8",
     "python.linting.flake8Args": ["--max-line-length=120"],
     "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "~/venvs/flake8/bin/flake8"
+    "python.linting.mypyPath": "~/venvs/mypy/bin/mypy"
 }
