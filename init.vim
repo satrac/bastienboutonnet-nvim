@@ -17,7 +17,7 @@ Plug 'machakann/vim-highlightedyank'
 "Plug 'tmhedberg/SimpylFold'
 Plug 'joshdick/onedark.vim'
 "Plug 'morhetz/gruvbox'
-"Plug 'rakr/vim-one'
+Plug 'rakr/vim-one'
 Plug 'junegunn/seoul256.vim'
 Plug 'sheerun/vim-polyglot'
 "Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -122,16 +122,20 @@ syntax on
 "colorscheme onedark
 "let g:seoul256_background = 236
 "colo seoul256
-set termguicolors
+"set termguicolors
 "let g:onedark_termcolors = 256
 "let g:onedark_terminal_italics = 1
 
+"Vim-one
+colorscheme one
+let g:one_allow_italics = 1
+set termguicolors
 " Tokyodark
-let g:tokyodark_transparent_background = 0
-let g:tokyodark_enable_italic_comment = 1
-let g:tokyodark_enable_italic = 1
-let g:tokyodark_color_gamma = "1.0"
-colorscheme tokyodark
+"let g:tokyodark_transparent_background = 0
+"let g:tokyodark_enable_italic_comment = 1
+"let g:tokyodark_enable_italic = 1
+"let g:tokyodark_color_gamma = "1.0"
+"colorscheme tokyodark
 
 
 "set background=dark
