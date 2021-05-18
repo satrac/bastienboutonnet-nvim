@@ -28,7 +28,7 @@ Plug 'junegunn/fzf'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -38,13 +38,14 @@ Plug 'bling/vim-bufferline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'tiagovla/tokyodark.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'neovim/nvim-lsp'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
-
+Plug 'ryanoasis/vim-devicons'
 "Initialize plugin system
 call plug#end()
-
+set encoding=UTF-8
 let g:airline#extensions#bufferline#enabled = 0
 
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -308,6 +309,12 @@ require'lspconfig'.pyls.setup{
   }
 }
 EOF
+
+"git
+lua << EOF
+require('gitsigns').setup()
+EOF
+
 
 set completeopt-=preview
 
