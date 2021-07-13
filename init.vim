@@ -7,7 +7,7 @@ Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 "Plug 'terryma/vim-multiple-cursors'
@@ -101,7 +101,7 @@ set nowritebackup
 set number
 set signcolumn=yes
 set title
-set wrap
+set nowrap
 setlocal wrap
 " Settings END
 "------------------------------------------------
