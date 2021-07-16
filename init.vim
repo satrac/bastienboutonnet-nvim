@@ -15,9 +15,9 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'machakann/vim-highlightedyank'
 "Plug 'lifepillar/vim-gruvbox8'
 "Plug 'tmhedberg/SimpylFold'
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 "Plug 'morhetz/gruvbox'
-Plug 'rakr/vim-one'
+"Plug 'rakr/vim-one'
 Plug 'junegunn/seoul256.vim'
 Plug 'sheerun/vim-polyglot'
 "Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -45,6 +45,7 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
+Plug 'navarasu/onedark.nvim'
 
 "Initialize plugin system
 call plug#end()
@@ -131,8 +132,8 @@ syntax on
 "let g:onedark_terminal_italics = 1
 
 "Vim-one
-colorscheme one
-let g:one_allow_italics = 1
+"colorscheme one
+"let g:one_allow_italics = 1
 set termguicolors
 " Tokyodark
 "let g:tokyodark_transparent_background = 0
@@ -141,6 +142,13 @@ set termguicolors
 "let g:tokyodark_color_gamma = "1.0"
 "colorscheme tokyodark
 
+"Onedark navarasu
+"
+let g:onedark_style = 'darker'
+colorscheme onedark
+"lua << EOF
+"require('onedark').setup()
+"EOF
 
 "set background=dark
 set cursorline
