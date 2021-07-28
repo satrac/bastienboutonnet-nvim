@@ -311,20 +311,26 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 lua require'nvim-treesitter.configs'.setup {ensure_installed = {"python"}, highlight = {enable = true, disable = {"yaml"}}}
 
 " Lspa
+"lua << EOF
+"require'lspconfig'.pyls.setup{
+  "settings = {
+    "pyls = {
+      "plugins = {
+        "pyls_mypy = {enabled = true},
+        "pycodestyle = {enabled = false},
+        "flake = {enabled = true},
+        "}
+      "}
+  "}
+"}
+"EOF
 lua << EOF
-require'lspconfig'.pyls.setup{
-  settings = {
-    pyls = {
-      plugins = {
-        pyls_mypy = {enabled = true},
-        pycodestyle = {enabled = false},
-        flake = {enabled = true},
-        }
-      }
-  }
-}
+require'lspconfig'.pylsp.setup{}
 EOF
 
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
 "git
 lua << EOF
 require('gitsigns').setup()
