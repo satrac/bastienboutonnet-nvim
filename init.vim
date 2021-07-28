@@ -34,7 +34,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'BurntSushi/ripgrep'
-Plug 'bling/vim-bufferline'
+"Plug 'bling/vim-bufferline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'tiagovla/tokyodark.nvim'
@@ -46,6 +46,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'nvim-lua/popup.nvim'
 Plug 'ThePrimeagen/harpoon'
 Plug 'navarasu/onedark.nvim'
+Plug 'crispgm/nvim-tabline'
 
 "Initialize plugin system
 call plug#end()
@@ -70,6 +71,9 @@ nnoremap <leader>ps <cmd>lua require('telescope.builtin').grep_string({ search =
 "nnoremap <leader>vc :lua require('theprimeagen.telescope').chat_selector()<CR>
 "nnoremap <leader>gc :lua require('theprimeagen.telescope').git_branches()<CR>
 
+lua << EOF
+require'tabline'.setup{}
+EOF
 
 runtime coc-init.vim
 let g:pydocstring_formatter = 'google'
