@@ -325,7 +325,22 @@ lua require'nvim-treesitter.configs'.setup {ensure_installed = {"python"}, highl
 "}
 "EOF
 lua << EOF
-require'lspconfig'.pylsp.setup{}
+require('lspconfig').pylsp.setup{
+   settings = {
+       pylsp = {
+           configurationSources = "flake8",
+           plugins = {
+                 flake8 = {
+                     enabled = true,
+                     maxLineLength = 120
+                 },
+                 pycodestyle = {
+                  enabled = false
+                }
+            }
+        }
+    }
+}
 EOF
 
 lua << EOF
